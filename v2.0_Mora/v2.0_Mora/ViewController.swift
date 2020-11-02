@@ -15,9 +15,12 @@ class ViewController: UIViewController {
     let m_player = ("computer", "self")
     
     // 0：贏 ｜ 1: 輸 ｜ 2: 平手
-    let winloseBox = ("贏", "輸", "平手")
+    let winloseBox = ("win", "lose", "tie")
     var winAndLose:[Int] = []
     var m_recordListRps: [[String:String]] = []
+    
+    // segue name
+    let segueName = ("segue_rps_to_table", "segue_rps_to_collection")
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var comImage: UIImageView!
@@ -53,39 +56,40 @@ class ViewController: UIViewController {
         case let (x, y) where x == y:
             m_recordListRps.append(["self": "\(m_rps[x])","com": "\(m_rps[y])", "result": (winloseBox.2), "time": nowTime])
             print(m_recordListRps)
-            return resultLabel.text! = (winloseBox.2)
+            return resultLabel.text! = changeToCH(winloseBox.2)
         case (0,1):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.1), "time": nowTime])
-            return resultLabel.text! = (winloseBox.1)
+            return resultLabel.text! = changeToCH(winloseBox.1)
         case (0,2):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.0), "time": nowTime])
-            return resultLabel.text! = (winloseBox.0)
+            return resultLabel.text! = changeToCH(winloseBox.0)
         case (1,0):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.0), "time": nowTime])
-            return resultLabel.text! = (winloseBox.0)
+            return resultLabel.text! = changeToCH(winloseBox.0)
         case (1,2):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.1), "time": nowTime])
-            return resultLabel.text! = (winloseBox.1)
+            return resultLabel.text! = changeToCH(winloseBox.1)
         case (2,0):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.1), "time": nowTime])
-            return resultLabel.text! = (winloseBox.1)
+            return resultLabel.text! = changeToCH(winloseBox.1)
         case (2,1):
             m_recordListRps.append(["self": m_rps[checkBox.0],"com": m_rps[checkBox.1], "result": (winloseBox.0), "time": nowTime])
-            return resultLabel.text! = (winloseBox.0)
+            return resultLabel.text! = changeToCH(winloseBox.0)
         case (_, _):
             return
         }
         
     }
     
-    func nowTimeString() ->String{
-        let currentDate = Date()
-        let dataFormatter = DateFormatter() //實體化日期格式化物件
-        dataFormatter.locale = Locale(identifier: "zh_Hant_TW")
-            dataFormatter.dateFormat = "YYYY年MM月dd日"
-        let stringDate = dataFormatter.string(from: currentDate)
-        return stringDate
-    }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName.0{
+            let tableVC = segue.destination as! MoraTableViewController
+            if m_recordListRps != [] {
+                tableVC.m_recordListRpsView = m_recordListRps
+            }
+        }
+    }
 }
 

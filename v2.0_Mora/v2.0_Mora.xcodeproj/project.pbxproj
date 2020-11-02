@@ -11,6 +11,9 @@
 		6347D1E2254FB9D300815B89 /* MoraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1E0254FB9D300815B89 /* MoraTableViewCell.swift */; };
 		6347D1E3254FB9D300815B89 /* MoraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6347D1E1254FB9D300815B89 /* MoraTableViewCell.xib */; };
 		6347D1E6254FDBD000815B89 /* ToolsFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1E5254FDBD000815B89 /* ToolsFunction.swift */; };
+		6347D1EE254FECC600815B89 /* MoraCellectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1ED254FECC600815B89 /* MoraCellectionViewController.swift */; };
+		6347D1F3254FECE100815B89 /* MoraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1F1254FECE100815B89 /* MoraCollectionViewCell.swift */; };
+		6347D1F4254FECE100815B89 /* MoraCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6347D1F2254FECE100815B89 /* MoraCollectionViewCell.xib */; };
 		63D65DA2254BE4E6004C20A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D65DA1254BE4E6004C20A3 /* AppDelegate.swift */; };
 		63D65DA4254BE4E6004C20A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D65DA3254BE4E6004C20A3 /* SceneDelegate.swift */; };
 		63D65DA6254BE4E6004C20A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D65DA5254BE4E6004C20A3 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 		6347D1E0254FB9D300815B89 /* MoraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraTableViewCell.swift; sourceTree = "<group>"; };
 		6347D1E1254FB9D300815B89 /* MoraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoraTableViewCell.xib; sourceTree = "<group>"; };
 		6347D1E5254FDBD000815B89 /* ToolsFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsFunction.swift; sourceTree = "<group>"; };
+		6347D1ED254FECC600815B89 /* MoraCellectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraCellectionViewController.swift; sourceTree = "<group>"; };
+		6347D1F1254FECE100815B89 /* MoraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraCollectionViewCell.swift; sourceTree = "<group>"; };
+		6347D1F2254FECE100815B89 /* MoraCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoraCollectionViewCell.xib; sourceTree = "<group>"; };
 		63D65D9E254BE4E6004C20A3 /* v2.0_Mora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = v2.0_Mora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D65DA1254BE4E6004C20A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63D65DA3254BE4E6004C20A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,16 @@
 			path = MoraTableView;
 			sourceTree = "<group>";
 		};
+		6347D1EC254FEC9700815B89 /* MoraCellectionView */ = {
+			isa = PBXGroup;
+			children = (
+				6347D1ED254FECC600815B89 /* MoraCellectionViewController.swift */,
+				6347D1F1254FECE100815B89 /* MoraCollectionViewCell.swift */,
+				6347D1F2254FECE100815B89 /* MoraCollectionViewCell.xib */,
+			);
+			path = MoraCellectionView;
+			sourceTree = "<group>";
+		};
 		63D65D95254BE4E6004C20A3 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +90,7 @@
 		63D65DA0254BE4E6004C20A3 /* v2.0_Mora */ = {
 			isa = PBXGroup;
 			children = (
+				6347D1EC254FEC9700815B89 /* MoraCellectionView */,
 				6347D1C8254FB13B00815B89 /* MoraTableView */,
 				63D65DA1254BE4E6004C20A3 /* AppDelegate.swift */,
 				63D65DA3254BE4E6004C20A3 /* SceneDelegate.swift */,
@@ -144,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6347D1F4254FECE100815B89 /* MoraCollectionViewCell.xib in Resources */,
 				6347D1E3254FB9D300815B89 /* MoraTableViewCell.xib in Resources */,
 				63D65DAE254BE4E7004C20A3 /* LaunchScreen.storyboard in Resources */,
 				63D65DAB254BE4E7004C20A3 /* Assets.xcassets in Resources */,
@@ -158,10 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6347D1EE254FECC600815B89 /* MoraCellectionViewController.swift in Sources */,
 				63D65DA6254BE4E6004C20A3 /* ViewController.swift in Sources */,
 				63D65DA2254BE4E6004C20A3 /* AppDelegate.swift in Sources */,
 				6347D1DE254FB76C00815B89 /* MoraTableViewController.swift in Sources */,
 				6347D1E6254FDBD000815B89 /* ToolsFunction.swift in Sources */,
+				6347D1F3254FECE100815B89 /* MoraCollectionViewCell.swift in Sources */,
 				6347D1E2254FB9D300815B89 /* MoraTableViewCell.swift in Sources */,
 				63D65DA4254BE4E6004C20A3 /* SceneDelegate.swift in Sources */,
 			);

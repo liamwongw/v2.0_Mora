@@ -8,7 +8,7 @@
 import Foundation
 
 
-func nowTimeString() ->String{
+func m_nowTimeString() ->String{
     let currentDate = Date()
     let dataFormatter = DateFormatter() //實體化日期格式化物件
     dataFormatter.locale = Locale(identifier: "zh_Hant_TW")
@@ -18,7 +18,7 @@ func nowTimeString() ->String{
 }
 
 
-func changeToCH (_ result: String) -> String {
+func m_changeToCH (_ result: String) -> String {
 
     switch result {
     case "win":

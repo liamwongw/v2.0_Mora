@@ -35,8 +35,8 @@ class MoraTableViewController: UIViewController, UITableViewDataSource, UITableV
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MoraTableViewCell
         //let cell = UITableViewCell()
         tableCell.resultImage.image = UIImage(named: (m_recordListRpsView[indexPath.row] )["result"]!)
-        tableCell.selfResult.text = "我方: " +  changeToCH((m_recordListRpsView[indexPath.row] )["self"]!)
-        tableCell.comResult.text = "電腦: " +  changeToCH((m_recordListRpsView[indexPath.row] )["com"]!)
+        tableCell.selfResult.text = "我方: " +  m_changeToCH((m_recordListRpsView[indexPath.row] )["self"]!)
+        tableCell.comResult.text = "電腦: " +  m_changeToCH((m_recordListRpsView[indexPath.row] )["com"]!)
         tableCell.timeLabel.text = ((m_recordListRpsView[indexPath.row] )["time"]!)
         return tableCell
     }

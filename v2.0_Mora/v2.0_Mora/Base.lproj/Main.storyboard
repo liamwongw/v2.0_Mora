@@ -60,21 +60,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-yY-mmH">
                                 <rect key="frame" x="29" y="721" width="356" height="41"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-0M-Lks">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-0M-Lks" customClass="segue_rps_to_table">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="6Hy-ad-lD1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="詳細資訊"/>
+                                        <connections>
+                                            <segue destination="CUL-6E-xYV" kind="show" identifier="segue_rps_to_table" id="XzW-Bh-Ov5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-DW-nig">
                                         <rect key="frame" x="220" y="0.0" width="136" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="圖示顯示"/>
-                                        <connections>
-                                            <segue destination="CUL-6E-xYV" kind="show" id="fco-PI-jZA"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -121,21 +121,40 @@
             </objects>
             <point key="canvasLocation" x="-741" y="86"/>
         </scene>
-        <!--View Controller-->
+        <!--Mora Table View Controller-->
         <scene sceneID="iNT-Sv-c2c">
             <objects>
-                <viewController id="CUL-6E-xYV" sceneMemberID="viewController">
+                <viewController id="CUL-6E-xYV" customClass="MoraTableViewController" customModule="v2_0_Mora" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeZ-Kg-7XM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-GF-Tlz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CUL-6E-xYV" id="HRD-3s-8nW"/>
+                                    <outlet property="delegate" destination="CUL-6E-xYV" id="zs1-mg-709"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zbo-p2-yTr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I8g-GF-Tlz" firstAttribute="top" secondItem="zbo-p2-yTr" secondAttribute="top" id="C89-fa-wqc"/>
+                            <constraint firstAttribute="bottom" secondItem="I8g-GF-Tlz" secondAttribute="bottom" id="brE-Gg-pPk"/>
+                            <constraint firstItem="I8g-GF-Tlz" firstAttribute="trailing" secondItem="zbo-p2-yTr" secondAttribute="trailing" id="hvG-oG-8gQ"/>
+                            <constraint firstItem="I8g-GF-Tlz" firstAttribute="leading" secondItem="zbo-p2-yTr" secondAttribute="leading" id="j3M-vC-IaG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yZY-uU-eWr"/>
+                    <connections>
+                        <outlet property="MoraTableView" destination="I8g-GF-Tlz" id="8Fw-IV-HIm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR1-Fj-vQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="86"/>
+            <point key="canvasLocation" x="1242.0289855072465" y="85.714285714285708"/>
         </scene>
     </scenes>
     <resources>

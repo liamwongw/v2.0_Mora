@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var m_recordListRps: [[String:String]] = []
     
     // segue name
-    let segueName = ("segue_rps_to_table", "segue_rps_to_collection")
+
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var comImage: UIImageView!
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         comImage.image = UIImage(named: m_rps[comIndex])
         selfImage.image = UIImage(named: m_rps[selfIndex])
         checkWinner(selfIndex: selfIndex, comIndex: comIndex)
-        print(m_recordListRps)
+        //print(m_recordListRps)
         
     }
     
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         switch checkBox {
         case let (x, y) where x == y:
             m_recordListRps.append(["self": "\(m_rps[x])","com": "\(m_rps[y])", "result": (winloseBox.2), "time": nowTime])
-            print(m_recordListRps)
+            //print(m_recordListRps)
             m_winAndLose.append(winloseBox.2)
             return resultLabel.text! = m_changeToCH(winloseBox.2)
         case (0,1):
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
         
     }
     
-
+    let segueName = ("segue_rps_to_table", "segue_rps_to_collection")
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueName.0{
@@ -98,6 +98,8 @@ class ViewController: UIViewController {
                 tableVC.m_recordListRpsView = m_recordListRps
             }
         }
+        
+        
         switch segue.identifier {
         case segueName.0:
             let tableVC = segue.destination as! MoraTableViewController
@@ -105,7 +107,7 @@ class ViewController: UIViewController {
                 tableVC.m_recordListRpsView = m_recordListRps
             }
         case segueName.1:
-            let tableVC = segue.destination as! MoraCellectionViewController
+            let tableVC = segue.destination as! TableViewController
             if m_recordListRps != [] {
                 tableVC.m_images = m_winAndLose
                 print(tableVC.m_images)

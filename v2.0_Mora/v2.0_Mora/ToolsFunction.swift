@@ -8,6 +8,25 @@
 import Foundation
 
 
+func saveRowImage(_ images: [String]) -> [[String]] {
+    let maxCount = 11
+    var numberOfItemRow = 0
+    var newImageBox:[[String]] = []
+    if images != nil {
+        for i in 0...images.count{
+            if i == 0{
+                newImageBox[i].append(images[i])
+            } else {
+                numberOfItemRow = (i / maxCount)
+                newImageBox[numberOfItemRow].append(images[i])
+            }
+        }
+    }
+    
+    return newImageBox
+    
+}
+
 func m_nowTimeString() ->String{
     let currentDate = Date()
     let dataFormatter = DateFormatter() //實體化日期格式化物件

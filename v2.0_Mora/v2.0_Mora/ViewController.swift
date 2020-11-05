@@ -107,7 +107,7 @@ class ViewController: UIViewController {
                 tableVC.m_recordListRpsView = m_recordListRps
             }
         case segueName.1:
-            let tableVC = segue.destination as! TableViewController
+            let tableVC = segue.destination as! MainViewController
             if m_recordListRps != [] {
                 tableVC.m_images = m_winAndLose
                 print(tableVC.m_images)

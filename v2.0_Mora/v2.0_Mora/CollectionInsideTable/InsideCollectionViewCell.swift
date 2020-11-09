@@ -9,5 +9,8 @@ import UIKit
 
 class InsideCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    static var nib: UINib {
+        return UINib(nibName: "InsideCollectionViewCell", bundle: Bundle(for: self))
+    }
     
 }

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     let winloseBox = ("win", "lose", "tie")
     var m_winAndLose:[String] = []
     var m_recordListRps: [[String:String]] = []
-    
+    var pressedCount = 0
     // segue name
 
     
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         selfImage.image = UIImage(named: m_rps[selfIndex])
         checkWinner(selfIndex: selfIndex, comIndex: comIndex)
         //print(m_recordListRps)
+        pressedCount = addCount(pressedCount)
         
     }
     
@@ -107,10 +108,10 @@ class ViewController: UIViewController {
                 tableVC.m_recordListRpsView = m_recordListRps
             }
         case segueName.1:
-            let tableVC = segue.destination as! MainViewController
+            let tableVC = segue.destination as! TestTableViewController
             if m_recordListRps != [] {
-                tableVC.m_images = m_winAndLose
-                print(tableVC.m_images)
+                tableVC.m_Images = m_winAndLose
+                print(tableVC.m_Images)
             }else{
                 print("null")
             }

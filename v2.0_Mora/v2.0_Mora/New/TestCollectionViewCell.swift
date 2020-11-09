@@ -8,5 +8,7 @@
 import UIKit
 
 class TestCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
     
 }
+

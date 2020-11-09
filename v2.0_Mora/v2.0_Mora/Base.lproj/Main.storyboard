@@ -80,7 +80,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="圖示顯示"/>
                                         <connections>
-                                            <segue destination="0ar-4s-Ulh" kind="show" identifier="segue_rps_to_collection" id="kXs-Dz-qKd"/>
+                                            <segue destination="FpT-dL-SE8" kind="show" identifier="segue_rps_to_collection" id="wgI-Tc-0o5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -112,6 +112,92 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
+        <!--Test Table View Controller-->
+        <scene sceneID="bAv-Uo-2dw">
+            <objects>
+                <tableViewController id="FpT-dL-SE8" customClass="TestTableViewController" customModule="v2_0_Mora" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="udb-3d-pLR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="qiW-Ld-fh8" customClass="TableViewCell" customModule="v2_0_Mora" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qiW-Ld-fh8" id="5Q4-hM-5dD">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-lY-3BQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yYi-5V-9XK">
+                                                <size key="itemSize" width="64" height="64"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="lhP-Gm-eBO" customClass="TestCollectionViewCell" customModule="v2_0_Mora" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="18" width="64" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oOg-xE-CUJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="qIc-gL-Wv2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="64" id="2un-YF-xXe"/>
+                                                                    <constraint firstAttribute="height" constant="64" id="Svf-y4-8iz"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="leading" secondItem="oOg-xE-CUJ" secondAttribute="leading" id="2kw-2P-qXj"/>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="top" secondItem="oOg-xE-CUJ" secondAttribute="top" id="FV1-V5-D45"/>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="centerY" secondItem="oOg-xE-CUJ" secondAttribute="centerY" id="GJH-Jw-CiP"/>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="centerX" secondItem="oOg-xE-CUJ" secondAttribute="centerX" id="VcZ-mZ-f3I"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qIc-gL-Wv2" secondAttribute="bottom" id="Wg9-2O-kwP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qIc-gL-Wv2" secondAttribute="trailing" id="XsX-dM-3TS"/>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="width" secondItem="oOg-xE-CUJ" secondAttribute="width" id="t0z-DZ-jB0"/>
+                                                            <constraint firstItem="qIc-gL-Wv2" firstAttribute="height" secondItem="oOg-xE-CUJ" secondAttribute="height" id="wkR-Wv-exc"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="qIc-gL-Wv2" id="ISH-iv-Iia"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="udb-3d-pLR" id="u3w-Xy-FME"/>
+                                                <outlet property="delegate" destination="udb-3d-pLR" id="gsh-J7-mTP"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N5g-lY-3BQ" firstAttribute="top" secondItem="5Q4-hM-5dD" secondAttribute="top" id="DCF-JS-1XP"/>
+                                        <constraint firstItem="N5g-lY-3BQ" firstAttribute="leading" secondItem="5Q4-hM-5dD" secondAttribute="leading" id="IiM-5O-Vjh"/>
+                                        <constraint firstItem="N5g-lY-3BQ" firstAttribute="centerY" secondItem="5Q4-hM-5dD" secondAttribute="centerY" id="UHU-46-cZR"/>
+                                        <constraint firstAttribute="trailing" secondItem="N5g-lY-3BQ" secondAttribute="trailing" id="jVE-Fr-ahy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="N5g-lY-3BQ" id="p6b-mD-WEq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FpT-dL-SE8" id="Lta-UF-aMt"/>
+                            <outlet property="delegate" destination="FpT-dL-SE8" id="ss6-iI-7md"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="I9q-jA-XWN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4r7-7R-EJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765" y="968.75"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="BqI-tq-KcU">
             <objects>
@@ -121,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wkp-ac-f5T">
-                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainTableViewCell" id="9ji-2s-qu7" customClass="MainTableViewCell" customModule="v2_0_Mora" customModuleProvider="target">
@@ -141,7 +227,7 @@
                                                         <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InsideCollectionViewCell" id="d3a-Rh-4cE" customClass="InsideCollectionViewCell" customModule="v2_0_Mora" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InsideCollectionViewCell " id="d3a-Rh-4cE" userLabel="InsideCollectionViewCell" customClass="InsideCollectionViewCell" customModule="v2_0_Mora" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="11.5" width="65" height="65"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kJU-pw-pju">
@@ -169,8 +255,8 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="0ar-4s-Ulh" id="pI0-ML-EAh"/>
-                                                        <outlet property="delegate" destination="0ar-4s-Ulh" id="X6D-Ub-3cx"/>
+                                                        <outlet property="dataSource" destination="0ar-4s-Ulh" id="BXI-p7-QbU"/>
+                                                        <outlet property="delegate" destination="0ar-4s-Ulh" id="dlf-pr-Cey"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
@@ -183,13 +269,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="clCollectionView" destination="yu2-Hj-yPO" id="LvY-KD-V63"/>
+                                            <outlet property="collectionView" destination="yu2-Hj-yPO" id="bjw-qn-lLC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="0ar-4s-Ulh" id="DuN-X7-Jth"/>
-                                    <outlet property="delegate" destination="0ar-4s-Ulh" id="MTp-k2-PjJ"/>
+                                    <outlet property="dataSource" destination="0ar-4s-Ulh" id="Oc8-I8-gKb"/>
+                                    <outlet property="delegate" destination="0ar-4s-Ulh" id="rLZ-ah-5Ul"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -213,7 +299,7 @@
             <objects>
                 <navigationController id="JGk-14-Srv" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p07-HR-kb6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

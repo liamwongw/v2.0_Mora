@@ -56,3 +56,11 @@ func m_changeToCH (_ result: String) -> String {
         return "null"
     }
 }
+
+
+// 按鈕計數器
+func addCount(_ number: Int) -> Int {
+    var x = number + 1
+    print(x)
+    return x
+}

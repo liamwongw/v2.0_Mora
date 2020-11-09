@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6322FFE125586EF400827A88 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322FFE025586EF400827A88 /* TestTableViewController.swift */; };
+		6322FFE425586F2C00827A88 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322FFE325586F2C00827A88 /* TableViewCell.swift */; };
+		6322FFE72558D54E00827A88 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322FFE62558D54E00827A88 /* TestCollectionViewCell.swift */; };
 		633B0B3525537DA100DB5552 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633B0B3425537DA100DB5552 /* Helper.swift */; };
 		6347D1DE254FB76C00815B89 /* MoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1DD254FB76C00815B89 /* MoraTableViewController.swift */; };
 		6347D1E2254FB9D300815B89 /* MoraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347D1E0254FB9D300815B89 /* MoraTableViewCell.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6322FFE025586EF400827A88 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		6322FFE325586F2C00827A88 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6322FFE62558D54E00827A88 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		633B0B3425537DA100DB5552 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6347D1DD254FB76C00815B89 /* MoraTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraTableViewController.swift; sourceTree = "<group>"; };
 		6347D1E0254FB9D300815B89 /* MoraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		63D65DA0254BE4E6004C20A3 /* v2.0_Mora */ = {
 			isa = PBXGroup;
 			children = (
+				63F6A21A25553FFA0017A863 /* New */,
 				6347D2242550FA7200815B89 /* CollectionInsideTable */,
 				6347D1EC254FEC9700815B89 /* MoraCellectionView */,
 				6347D1C8254FB13B00815B89 /* MoraTableView */,
@@ -122,6 +129,16 @@
 				6347D1E5254FDBD000815B89 /* ToolsFunction.swift */,
 			);
 			path = v2.0_Mora;
+			sourceTree = "<group>";
+		};
+		63F6A21A25553FFA0017A863 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				6322FFE025586EF400827A88 /* TestTableViewController.swift */,
+				6322FFE325586F2C00827A88 /* TableViewCell.swift */,
+				6322FFE62558D54E00827A88 /* TestCollectionViewCell.swift */,
+			);
+			path = New;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,14 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6322FFE72558D54E00827A88 /* TestCollectionViewCell.swift in Sources */,
 				6347D1EE254FECC600815B89 /* MoraCellectionViewController.swift in Sources */,
 				63D65DA6254BE4E6004C20A3 /* ViewController.swift in Sources */,
 				63D65DA2254BE4E6004C20A3 /* AppDelegate.swift in Sources */,
 				63F6A1D02553E4C10017A863 /* MainViewController.swift in Sources */,
 				6347D1DE254FB76C00815B89 /* MoraTableViewController.swift in Sources */,
+				6322FFE425586F2C00827A88 /* TableViewCell.swift in Sources */,
 				63F6A1C62553E2D60017A863 /* MainTableViewCell.swift in Sources */,
 				6347D1E6254FDBD000815B89 /* ToolsFunction.swift in Sources */,
 				633B0B3525537DA100DB5552 /* Helper.swift in Sources */,
+				6322FFE125586EF400827A88 /* TestTableViewController.swift in Sources */,
 				6347D1F3254FECE100815B89 /* MoraCollectionViewCell.swift in Sources */,
 				6347D1E2254FB9D300815B89 /* MoraTableViewCell.swift in Sources */,
 				63D65DA4254BE4E6004C20A3 /* SceneDelegate.swift in Sources */,

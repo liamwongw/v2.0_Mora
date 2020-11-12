@@ -6,7 +6,7 @@ class TestTableViewController: UITableViewController {
     var m_Images = [String]()
 //    let model = generateRandomData()
 //    var storedOffsets = [Int: CGFloat]()
-    let m_maxCellCount = 11
+    let m_maxCellCount = 5
     var m_maxTableCount = 0
     var m_cells = 0
     
@@ -28,14 +28,14 @@ class TestTableViewController: UITableViewController {
         var totalArray = [String]()
         var sumCount = m_Images.count - (m_maxCellCount * indexPath.row)
         print("Now TableView indexPath.ro : \(indexPath.row)")
-            if (m_Images.count - (m_maxCellCount * indexPath.row)) >= 11 {
+            if (m_Images.count - (m_maxCellCount * indexPath.row)) >= m_maxCellCount {
                 for i in ((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount ) + m_maxCellCount) - 1) {
                     totalArray.append(m_Images[i])
                     
                 }
                 print("1. m_Images.count - (m_maxCellCount * indexPath.row) \(m_Images.count - (m_maxCellCount * indexPath.row))")
                 
-                print("1. ((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount ) + 10)) \(((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount ) + 10)))")
+                print("1. ((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount ) + 10)) \(((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount ) + m_maxCellCount - 1)))")
             }else {
                 for i in ((indexPath.row * m_maxCellCount)...((indexPath.row * m_maxCellCount - 1) + (m_Images.count - (m_maxCellCount * indexPath.row)))) {
                     totalArray.append(m_Images[i])

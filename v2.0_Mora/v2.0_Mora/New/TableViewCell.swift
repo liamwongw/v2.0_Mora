@@ -10,7 +10,6 @@ import UIKit
 class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var m_rows = 0
     var m_totalCellArray = [String]()
     
     override func awakeFromNib() {
@@ -34,11 +33,11 @@ extension TableViewCell:UICollectionViewDelegate, UICollectionViewDataSource {
 //        collectionView.setContentOffset(collectionView.contentOffset, animated:false) // Stops collection view if it was scrolling.
 //        collectionView.reloadData()
 //    }
-
-    var collectionViewOffset: CGFloat {
-        set { collectionView.contentOffset.x = newValue }
-        get { return collectionView.contentOffset.x }
-    }
+//
+//    var collectionViewOffset: CGFloat {
+//        set { collectionView.contentOffset.x = newValue }
+//        get { return collectionView.contentOffset.x }
+//    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         print("m_totalCellArray.count: \(m_totalCellArray.count)")
@@ -53,14 +52,14 @@ extension TableViewCell:UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! TestCollectionViewCell
         
         
-        print("1. collectionView TotalAraary:\(m_totalCellArray)")
+        print("\(indexPath.row). collectionView TotalAraary:\(m_totalCellArray[indexPath.row])")
         cell.imageView.image = UIImage(named: m_totalCellArray[indexPath.row])
 //        cell.backgroundColor = model[collectionView.tag][indexPath.item]
         
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
+//    }
 }
